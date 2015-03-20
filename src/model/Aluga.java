@@ -1,5 +1,8 @@
 package model;
-
+/**
+ * 
+ * @author Lucas Miranda, Fábio Dias e Bruno Clementino 
+ */
 import model.automovel.Veiculo;
 import model.individuo.Cliente;
 
