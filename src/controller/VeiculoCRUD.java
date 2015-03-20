@@ -33,12 +33,10 @@ public class VeiculoCRUD {
 	 * @return
 	 */
 	public boolean cadastrar_carro(Carro carro) {
-
 		if (!veiculos.contains(carro)) {
 			return veiculos.add(carro);
 		}
 		return false;
-
 	}
 
 	/**
@@ -48,7 +46,7 @@ public class VeiculoCRUD {
 	 * @param placa
 	 * @return
 	 */
-	public boolean remove(Placa placa) {
+	public boolean remove_carro(Placa placa) {
 
 		for (Veiculo veiculo : veiculos) {
 			if (veiculo.getPlaca().equals(placa)) {
@@ -90,11 +88,11 @@ public class VeiculoCRUD {
 	 * @param placa
 	 * @return
 	 */
-	public List<Carro> consultar(Placa placa) {
-		List<Carro> carrosBusca = new ArrayList<Carro>();
-		for (Carro carro : veiculos) {
-			if (carro.getPlaca().equals(placa)) {
-				carrosBusca.add(carro);
+	public List<Veiculo> consultar(Placa placa) {
+		List<Veiculo> carrosBusca = new ArrayList<Veiculo>();
+		for (Veiculo veiculo : veiculos) {
+			if (veiculo.getPlaca().equals(placa)) {
+				carrosBusca.add(veiculo);
 			}
 		}
 		if (carrosBusca.isEmpty()) {
@@ -105,9 +103,9 @@ public class VeiculoCRUD {
 	}
 
 	
-	public List<Carro> consultar(String marca) {
-		List<Carro> carrosBusca = new ArrayList<Carro>();
-		for (Carro carro : veiculos) {
+	public List<Veiculo> consultar(String marca) {
+		List<Veiculo> carrosBusca = new ArrayList<Veiculo>();
+		for (Veiculo carro : veiculos) {
 			if (carro.getMarca().equals(marca)) {
 				carrosBusca.add(carro);
 			}
@@ -115,8 +113,7 @@ public class VeiculoCRUD {
 		return carrosBusca;
 	}
 
-	public List<Carro> getCarros() {
-
+	public List<Veiculo> getVeiculo() { 
 		return veiculos;
 	}
 

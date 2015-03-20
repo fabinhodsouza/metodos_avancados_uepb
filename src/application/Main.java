@@ -1,8 +1,9 @@
 package application;
 
-import controller.CarroCRUD;
+import controller.VeiculoCRUD;
 import model.Placa;
 import model.automovel.Carro;
+import model.automovel.Veiculo;
 
 /**
  * 
@@ -14,10 +15,10 @@ public class Main {
 	Placa placa = new Placa("abcd2015", "Paraíba", "Campina Grande");
 	Carro carro = new Carro("Fiat", "Branco", "Gol", "Quadrado", placa, 2);
 	
-	CarroCRUD carroCRUD = new CarroCRUD();
+	VeiculoCRUD carroCRUD = new VeiculoCRUD();
 	
 	public Main() {
-		carroCRUD.cadastrar(carro);
+		carroCRUD.cadastrar_carro(carro);
 	
 		mostrarTodosOsCarros();
 	
@@ -27,8 +28,8 @@ public class Main {
 		int cont = 1;
 		System.out.println("Carros cadastrados:\n");
 		System.out.println("MARCA\t|\tCOR\t|\tMODELO\t|\tTIPO DO CARRO\t|\tPORTAS\t|\tPLACA");
-		for(Carro carro : carroCRUD.getCarros()){
-			System.out.println(cont+" "+carroCRUD.mostraCarro(carro));
+		for(Veiculo carro : carroCRUD.getVeiculo()){
+			System.out.println(cont+" "+carroCRUD.mostraCarro(carro.getMarca()));
 			cont++;
 		}
 	}

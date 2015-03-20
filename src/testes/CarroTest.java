@@ -1,6 +1,6 @@
 package testes;
 
-import model.Aluga;
+import model.Aluga; 
 import model.Endereco;
 import model.Placa;
 import model.automovel.Carro;
@@ -10,11 +10,11 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import controller.CarroCRUD;
+import controller.VeiculoCRUD;
 
 public class CarroTest {
 
-	private CarroCRUD carroCRUD;
+	private VeiculoCRUD carroCRUD;
 	private Carro carro;
 	public Placa placa;
 
@@ -22,23 +22,23 @@ public class CarroTest {
 	public void setUp() {
 		placa = new Placa("abcd2015", "Paraíba", "Campina Grande");
 		carro = new Carro("Fiat", "Branco", "Gol", "Quadrado", placa, 2);
-		carroCRUD = new CarroCRUD();
+		carroCRUD = new VeiculoCRUD();
 		
 	}
 
 	@Test
 	public void testCarro() {
 		Assert.assertEquals(0, carroCRUD.qtdCarros());
-		carroCRUD.cadastrar(carro);
+		carroCRUD.cadastrar_carro(carro);
 		Assert.assertEquals(1, carroCRUD.qtdCarros());
-		carroCRUD.remove(placa);
+		carroCRUD.remove_carro(placa);
 		Assert.assertEquals(0, carroCRUD.qtdCarros());
 
-		carroCRUD.cadastrar(carro);
+		carroCRUD.cadastrar_carro(carro);
 
 		placa.setCodigo("afaf2015");
 		carro = new Carro("Chevrolet", "Branco", "Corsa", "Cedan", placa, 4);
-		carroCRUD.cadastrar(carro);
+		carroCRUD.cadastrar_carro(carro);
 		Assert.assertEquals(2, carroCRUD.qtdCarros());
 
 		placa.setCodigo("afaf2015");
