@@ -1,5 +1,12 @@
 package model;
 
+import model.automovel.Veiculo;
+
+/**
+ * Essa Classe é um atributo para o {@link Veiculo}. Fazendo a composição com veiculo.
+ * @author Lucas Miranda, Fábio Dias e Bruno Clementino
+ *
+ */
 public class Placa {
 	
 	private String codigo;
@@ -36,5 +43,4 @@ public class Placa {
 	public void setCidade(String cidade) {
 		this.cidade = cidade;
 	}	
-
 }

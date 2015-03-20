@@ -1,7 +1,13 @@
 package model.automovel;
 
+import model.Aluga;
 import model.Placa;
-
+/**
+ * Super Classe. Ele é a classe que é chamada por herança. 
+ * 
+ * @author Lucas Miranda, Fábio Dias e Bruno Clementino
+ *
+ */
 public abstract class Veiculo {
 	
 	private String marca;
@@ -9,7 +15,16 @@ public abstract class Veiculo {
 	private String modelo;
 	private String tipoModelo;
 	private Placa placa;
-	
+	/**
+	 * Nesse construtor têm os parametros que são básicos para seja considerado apto para {@link Aluga}. 
+	 * Sem esses parametros não poderam, ou não deveriam ser cadastrados.  
+	 * 
+	 * @param marca
+	 * @param cor
+	 * @param modelo
+	 * @param tipoModelo
+	 * @param placa
+	 */
 	public Veiculo(String marca, String cor, String modelo, String tipoModelo,
 			Placa placa) {
 		super();
@@ -59,5 +74,4 @@ public abstract class Veiculo {
 	public void setPlaca(Placa placa) {
 		this.placa = placa;
 	}
-
 }

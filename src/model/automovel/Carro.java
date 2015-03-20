@@ -13,8 +13,14 @@ public class Carro extends Veiculo {
 	private Integer porta;
 
 	/**
-	 * Método contrutor: recebe seis parametros <li>marca</li><li>cor</li><li>
-	 * modelo</li><li>tipoModelo</li><li>placa</li><li>porta</li>
+	 * Método contrutor: recebe seis parametros: 
+	 * 	<li>marca</li>
+	 * 	<li>cor</li>
+	 * 	<li>modelo</li>
+	 * 	<li>tipoModelo</li>
+	 * 	<li>placa</li>
+	 * 	<li>porta</li>
+	 * 
 	 */
 	public Carro(String marca, String cor, String modelo, String tipoModelo,
 			Placa placa, Integer porta) {
@@ -22,10 +28,18 @@ public class Carro extends Veiculo {
 		this.setPorta(porta);
 	}
 
+	/**
+	 * Retorna a quantidade de porta do {@link Carro}
+	 * @return {@literal Integer}
+	 */
 	public Integer getPorta() {
 		return porta;
 	}
-
+	
+	/**
+	 * Modifica a quantidade de porta.
+	 * @param porta
+	 */
 	public void setPorta(Integer porta) {
 		this.porta = porta;
 	}

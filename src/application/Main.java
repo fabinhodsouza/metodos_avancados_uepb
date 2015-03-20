@@ -4,6 +4,11 @@ import controller.CarroCRUD;
 import model.Placa;
 import model.automovel.Carro;
 
+/**
+ * 
+ * @author Lucas Miranda, Fábio Dias e Bruno Clementino.
+ *
+ */
 public class Main {
 	
 	Placa placa = new Placa("abcd2015", "Paraíba", "Campina Grande");

@@ -1,6 +1,6 @@
 package model;
 /**
- * 
+ * Essa classe 
  * @author Lucas Miranda, Fábio Dias e Bruno Clementino 
  */
 import model.automovel.Veiculo;
