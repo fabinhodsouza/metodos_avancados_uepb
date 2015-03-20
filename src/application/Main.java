@@ -29,7 +29,7 @@ public class Main {
 		System.out.println("Carros cadastrados:\n");
 		System.out.println("MARCA\t|\tCOR\t|\tMODELO\t|\tTIPO DO CARRO\t|\tPORTAS\t|\tPLACA");
 		for(Veiculo carro : carroCRUD.getVeiculo()){
-			System.out.println(cont+" "+carroCRUD.mostraCarro(carro.getMarca()));
+			System.out.println(cont+" ");
 			cont++;
 		}
 	}
