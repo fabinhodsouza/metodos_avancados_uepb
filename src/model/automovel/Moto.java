@@ -11,6 +11,7 @@ public class Moto extends Veiculo {
 		super(marca, cor, modelo, tipoModelo, placa);
 		this.setRoda(roda);
 	}
+	
 
 	public Integer getRoda() {
 		return roda;

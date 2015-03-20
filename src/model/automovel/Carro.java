@@ -11,6 +11,7 @@ public class Carro extends Veiculo {
 		super(marca, cor, modelo, tipoModelo, placa);
 		this.setPorta(porta);
 	}
+	
 
 	public Integer getPorta() {
 		return porta;

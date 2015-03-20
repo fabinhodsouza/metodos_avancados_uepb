@@ -2,7 +2,7 @@ package model.automovel;
 
 import model.Placa;
 
-public class Veiculo {
+public abstract class Veiculo {
 	
 	private String marca;
 	private String cor;
