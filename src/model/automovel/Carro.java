@@ -11,7 +11,7 @@ import model.Placa;
 public class Carro extends Veiculo {
 	/** Atributo que mostra a quantidade de porta do carro. */
 	private Integer porta;
-
+	
 	/**
 	 * Método contrutor: recebe seis parametros: 
 	 * 	<li>marca</li>
@@ -27,7 +27,7 @@ public class Carro extends Veiculo {
 		super(marca, cor, modelo, tipoModelo, placa);
 		this.setPorta(porta);
 	}
-
+	
 	/**
 	 * Retorna a quantidade de porta do {@link Carro}
 	 * @return {@literal Integer}

@@ -118,7 +118,7 @@ public class VeiculoCRUD {
 	}
 
 	/**
-	 * Verifica se alguem já alugou o veiiculo.
+	 * Verifica se alguem já alugou o veículo.
 	 * 
 	 * @param carro
 	 * @return {@link Boolean}
@@ -131,7 +131,7 @@ public class VeiculoCRUD {
 		}
 		return false;
 	}
-	
+
 	/**
 	 * É o toString para mostrar o {@link Carro}
 	 * @param carro
@@ -144,5 +144,4 @@ public class VeiculoCRUD {
 				+ carro.getPorta() + "\t|\t" + placa.getCodigo() + " "
 				+ placa.getCidade() + "-" + placa.getEstado());
 	}
-
 }
