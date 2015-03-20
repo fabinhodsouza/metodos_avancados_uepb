@@ -40,6 +40,5 @@ public class Moto extends Veiculo {
 	 */
 	public void setRoda(Integer roda) {
 		this.roda = roda;
-	}
-	
+	}	
 }

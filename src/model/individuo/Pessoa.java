@@ -1,5 +1,10 @@
 package model.individuo;
 
+/**
+ * Classe Pessoa que tem como atributos: nome, cpf, rg e telefone.
+ * @author Lucas Miranda
+ *
+ */
 public class Pessoa {
 	
 	private String nome;

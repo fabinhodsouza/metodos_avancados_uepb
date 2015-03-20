@@ -1,17 +1,24 @@
 package model;
-/**
- * Essa classe 
- * @author Lucas Miranda, Fábio Dias e Bruno Clementino 
- */
+
 import model.automovel.Veiculo;
 import model.individuo.Cliente;
-
+/**
+ * Essa classe definirá o que será necessário para alugar o veículo. Que no caso são: {@link Cliente}, {@link Veiculo} e Valor do aluguel.
+ *  
+ * @author Lucas Miranda, Fábio Dias e Bruno Clementino 
+ */
 public class Aluga {
 	
 	private Cliente cliente;
 	private Veiculo veiculo;
 	private Double valor;
 	
+	/**
+	 * 
+	 * @param cliente
+	 * @param veiculo
+	 * @param valor
+	 */
 	public Aluga(Cliente cliente, Veiculo veiculo, Double valor) {
 		super();
 		this.cliente = cliente;

@@ -1,7 +1,12 @@
 package model.individuo;
 
 import model.Endereco;
-
+/**
+ * Classe que herda da super classe {@link Pessoa}. Têm também um {@link Endereco} como atributos. 
+ * 
+ * @author Lucas Miranda, Fábio Dias e Bruno Clementino
+ *
+ */
 public class Cliente extends Pessoa {
 	
 	private Endereco endereco;

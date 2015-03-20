@@ -18,7 +18,9 @@ public class Main {
 	
 	public Main() {
 		carroCRUD.cadastrar(carro);
+	
 		mostrarTodosOsCarros();
+	
 	}
 	
 	public void mostrarTodosOsCarros(){
