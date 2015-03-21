@@ -2,7 +2,7 @@ package model;
 
 /**
  * Estrutura que guarda e gera o endereço.
- * @author Lucas Miranda
+ * @author Lucas Miranda, Fábio Dias e Bruno Clementino
  *
  */
 public class Endereco {
