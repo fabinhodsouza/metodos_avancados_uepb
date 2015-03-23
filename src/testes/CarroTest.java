@@ -10,11 +10,11 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import controller.VeiculoCRUD;
+import controller.CarroCRUD;
 
 public class CarroTest {
 
-	private VeiculoCRUD carroCRUD;
+	private CarroCRUD carroCRUD;
 	private Carro carro;
 	public Placa placa;
 
@@ -22,23 +22,23 @@ public class CarroTest {
 	public void setUp() {
 		placa = new Placa("abcd2015", "Paraíba", "Campina Grande");
 		carro = new Carro("Fiat", "Branco", "Gol", "Quadrado", placa, 2);
-		carroCRUD = new VeiculoCRUD();
+		carroCRUD = new CarroCRUD();
 		
 	}
 
 	@Test
 	public void testCarro() {
 		Assert.assertEquals(0, carroCRUD.qtdCarros());
-		carroCRUD.cadastrar_carro(carro);
+		carroCRUD.cadastrar(carro);
 		Assert.assertEquals(1, carroCRUD.qtdCarros());
-		carroCRUD.remove_carro(placa);
+		carroCRUD.remove(placa);
 		Assert.assertEquals(0, carroCRUD.qtdCarros());
 
-		carroCRUD.cadastrar_carro(carro);
+		carroCRUD.cadastrar(carro);
 
 		placa.setCodigo("afaf2015");
 		carro = new Carro("Chevrolet", "Branco", "Corsa", "Cedan", placa, 4);
-		carroCRUD.cadastrar_carro(carro);
+		carroCRUD.cadastrar(carro);
 		Assert.assertEquals(2, carroCRUD.qtdCarros());
 
 		placa.setCodigo("afaf2015");
