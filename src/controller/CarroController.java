@@ -6,7 +6,7 @@ import java.util.List;
 import model.Placa;
 import model.automovel.Carro;
 
-public class CarroCRUD {
+public class CarroController {
 
 	List<Carro> carros = new ArrayList<Carro>();
 

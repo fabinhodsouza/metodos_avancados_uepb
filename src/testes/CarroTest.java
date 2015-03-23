@@ -10,11 +10,11 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import controller.CarroCRUD;
+import controller.CarroController;
 
 public class CarroTest {
 
-	private CarroCRUD carroCRUD;
+	private CarroController carroCRUD;
 	
 	private Carro carro1, carro2, carro3; 
 	private List<Carro> carros;
@@ -24,7 +24,7 @@ public class CarroTest {
 	public void setUp() {
 		placa1 = new Placa("ABC-2015", "Paraíba", "Campina Grande");
 		carro1 = new Carro("Fiat", "Branco", "Siena", "Sedan", placa1, 4);
-		carroCRUD = new CarroCRUD();
+		carroCRUD = new CarroController();
 		carros = new ArrayList<Carro>();
 		
 	}

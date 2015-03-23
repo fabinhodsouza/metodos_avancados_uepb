@@ -7,7 +7,7 @@ import model.Placa;
 import model.automovel.Carro;
 import model.automovel.Moto;
 
-public class MotoCRUD {
+public class MotoController {
 
 List<Moto> motos = new ArrayList<Moto>();
 	

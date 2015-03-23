@@ -11,13 +11,13 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import controller.MotoCRUD;
-import controller.MotoCRUD;
+import controller.MotoController;
+import controller.MotoController;
 
 
 public class MotoTest {
 
-	private MotoCRUD motoCRUD;
+	private MotoController motoCRUD;
 	
 	private Moto moto1, moto2, moto3; 
 	private List<Moto> motos;
@@ -27,7 +27,7 @@ public class MotoTest {
 	public void setUp() {
 		placa1 = new Placa("ABC-2015", "Paraíba", "Campina Grande");
 		moto1 = new Moto("Honda", "Vermelho", "Biz" , placa1, 2);
-		motoCRUD = new MotoCRUD();
+		motoCRUD = new MotoController();
 		motos = new ArrayList<Moto>();
 		
 	}
@@ -43,17 +43,16 @@ public class MotoTest {
 		motoCRUD.cadastrar(moto1);
 
 		placa2 = new Placa("OFF-2015", "Paraíba", "Campina Grande");
-		moto2 = new Moto("Chevrolet", "Branco", "Corsa", "Sedan", placa2, 4);
+		moto2 = new Moto("ByCristo", "Preto", "Triciclo", placa2, 3);
 		motoCRUD.cadastrar(moto2);
 		Assert.assertEquals(2, motoCRUD.qtdMotos());
 
-		moto3 = new Moto("Chevrolet", "Azul", "Corsa", "Hatch", placa1, 2);
+		moto3 = new Moto("Honda", "Amarelo", "TRX 420 FourTrax", placa1, 4);
 		motoCRUD.atualizar(placa1, moto3);
 		Assert.assertEquals(2, motoCRUD.qtdMotos());
 		
-		motos.add(moto2);
 		motos.add(moto3);
-		Assert.assertEquals(motos, motoCRUD.consultar("Chevrolet"));
+		Assert.assertEquals(motos, motoCRUD.consultar("Honda"));
 		
 		Assert.assertEquals(moto3, motoCRUD.consultar(placa1));
 		
