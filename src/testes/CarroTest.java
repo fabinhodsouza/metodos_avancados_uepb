@@ -1,10 +1,10 @@
 package testes;
 
-import model.Aluga; 
-import model.Endereco;
+import java.util.ArrayList;
+import java.util.List;
+
 import model.Placa;
 import model.automovel.Carro;
-import model.individuo.Cliente;
 
 import org.junit.Assert;
 import org.junit.Before;
@@ -15,42 +15,44 @@ import controller.CarroCRUD;
 public class CarroTest {
 
 	private CarroCRUD carroCRUD;
-	private Carro carro;
-	public Placa placa;
+	
+	private Carro carro1, carro2, carro3; 
+	private List<Carro> carros;
+	public Placa placa1, placa2, placa3;
 
 	@Before
 	public void setUp() {
-		placa = new Placa("abcd2015", "Paraíba", "Campina Grande");
-		carro = new Carro("Fiat", "Branco", "Gol", "Quadrado", placa, 2);
+		placa1 = new Placa("ABC-2015", "Paraíba", "Campina Grande");
+		carro1 = new Carro("Fiat", "Branco", "Siena", "Sedan", placa1, 4);
 		carroCRUD = new CarroCRUD();
+		carros = new ArrayList<Carro>();
 		
 	}
 
 	@Test
 	public void testCarro() {
 		Assert.assertEquals(0, carroCRUD.qtdCarros());
-		carroCRUD.cadastrar(carro);
+		carroCRUD.cadastrar(carro1);
 		Assert.assertEquals(1, carroCRUD.qtdCarros());
-		carroCRUD.remove(placa);
+		carroCRUD.remove(placa1);
 		Assert.assertEquals(0, carroCRUD.qtdCarros());
 
-		carroCRUD.cadastrar(carro);
+		carroCRUD.cadastrar(carro1);
 
-		placa.setCodigo("afaf2015");
-		carro = new Carro("Chevrolet", "Branco", "Corsa", "Cedan", placa, 4);
-		carroCRUD.cadastrar(carro);
+		placa2 = new Placa("OFF-2015", "Paraíba", "Campina Grande");
+		carro2 = new Carro("Chevrolet", "Branco", "Corsa", "Sedan", placa2, 4);
+		carroCRUD.cadastrar(carro2);
 		Assert.assertEquals(2, carroCRUD.qtdCarros());
 
-		placa.setCodigo("afaf2015");
-		carro = new Carro("Chevrolet", "Azul", "Corsa", "Cedan", placa, 4);
-		carroCRUD.atualizar(placa, carro);
+		carro3 = new Carro("Chevrolet", "Azul", "Corsa", "Hatch", placa1, 2);
+		carroCRUD.atualizar(placa1, carro3);
 		Assert.assertEquals(2, carroCRUD.qtdCarros());
-
-		Endereco e1 = new Endereco("Rua 01", "Bairro 01", 2);
-		Cliente c2 = new Cliente("Lucas", "23123", "8381283189", "83123123", e1);
 		
-		Aluga alugar = new Aluga(c2, carro, 339.0);
-		Aluga alugar2 = new Aluga(c2, carro, 339.0);
+		carros.add(carro2);
+		carros.add(carro3);
+		Assert.assertEquals(carros, carroCRUD.consultar("Chevrolet"));
+		
+		Assert.assertEquals(carro3, carroCRUD.consultar(placa1));
 		
 		
 	}

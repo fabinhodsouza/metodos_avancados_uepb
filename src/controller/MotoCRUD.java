@@ -51,15 +51,15 @@ List<Moto> motos = new ArrayList<Moto>();
 		
 	}
 	
-	public List<Moto> consultar(Placa placa){
-		List<Moto> motosBusca = new ArrayList<Moto>();
-		for(Moto moto : motos){
-			if(moto.getPlaca().equals(placa)){
-				motosBusca.add(moto);
+	public Moto consultar(Placa placa) {
+		
+		for (Moto moto : motos) {
+			if (moto.getPlaca().equals(placa)) {
+				return moto;
 			}
 		}
-		System.out.println(motosBusca);
-		return motosBusca;
+		
+		return null;
 	}
 	
 	
@@ -78,13 +78,13 @@ List<Moto> motos = new ArrayList<Moto>();
 		return motos;
 	}
 	
-	public String mostraMoto(Moto moto){
+	/*public String mostraMoto(Moto moto){
 		Placa placa = moto.getPlaca();
 		return (moto.getMarca()+"\t|\t"+moto.getCor()+"\t|\t"+
 							moto.getModelo()+"\t|\t"+moto.getTipoModelo()+"\t|\t"+
 							moto.getRoda()+"\t|\t"+placa.getCodigo()+" "+
 							placa.getCidade()+"-"+placa.getEstado());
-	}
+	}*/
 	
 	
 }

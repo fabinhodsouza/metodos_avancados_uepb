@@ -10,7 +10,9 @@ import model.Placa;
 
 public class Carro extends Veiculo {
 	/** Atributo que mostra a quantidade de porta do carro. */
+	private String tipoModelo;
 	private Integer porta;
+	
 	
 	/**
 	 * Método contrutor: recebe seis parametros: 
@@ -24,8 +26,9 @@ public class Carro extends Veiculo {
 	 */
 	public Carro(String marca, String cor, String modelo, String tipoModelo,
 			Placa placa, Integer porta) {
-		super(marca, cor, modelo, tipoModelo, placa);
+		super(marca, cor, modelo, placa);
 		this.setPorta(porta);
+		this.setTipoModelo(tipoModelo);
 	}
 	
 	/**
@@ -43,5 +46,15 @@ public class Carro extends Veiculo {
 	public void setPorta(Integer porta) {
 		this.porta = porta;
 	}
+
+	public String getTipoModelo() {
+		return tipoModelo;
+	}
+
+	public void setTipoModelo(String tipoModelo) {
+		this.tipoModelo = tipoModelo;
+	}
+	
+	
 
 }
