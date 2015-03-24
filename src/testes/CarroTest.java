@@ -11,8 +11,12 @@ import org.junit.Before;
 import org.junit.Test;
 
 import controller.CarroController;
-
 /**
+ * O projeto consiste em uma empresa que deseja informatizar o sistema de
+ * aluguel de veiculos. A empresa trabalha com aluguel de carros e motos. Para
+ * isso ele quer cadastrar os veículos informando: placa, cor, modelo,
+ * fabricante, etc;
+ * 
  * Aqui será feito os testes referentes ao carro.
  * 
  * @author Lucas Miranda, Fábio Dias e Bruno Clementino.
