@@ -5,16 +5,18 @@ import java.util.List;
 
 import model.Placa;
 import model.automovel.Moto;
-import model.automovel.Moto;
 
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
 import controller.MotoController;
-import controller.MotoController;
 
-
+/**
+ * Testes referentes a  {@link Moto} 
+ * @author Lucas Miranda, Fábio Dias e Bruno Clementino.
+ *
+ */
 public class MotoTest {
 
 	private MotoController motoCRUD;

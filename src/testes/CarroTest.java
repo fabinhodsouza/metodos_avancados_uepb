@@ -12,6 +12,12 @@ import org.junit.Test;
 
 import controller.CarroController;
 
+/**
+ * Aqui será feito os testes referentes ao carro.
+ * 
+ * @author Lucas Miranda, Fábio Dias e Bruno Clementino.
+ *
+ */
 public class CarroTest {
 
 	private CarroController carroCRUD;
