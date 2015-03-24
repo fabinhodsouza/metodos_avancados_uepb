@@ -31,7 +31,7 @@ public class Placa {
 	}
 
 	public String getCodigo() {
-		return codigo;
+		return this.codigo;
 	}
 
 	public void setCodigo(String codigo) {
@@ -39,7 +39,7 @@ public class Placa {
 	}
 
 	public String getEstado() {
-		return estado;
+		return this.estado;
 	}
 
 	public void setEstado(String estado) {
