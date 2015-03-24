@@ -1,11 +1,11 @@
 package application;
 
-import controller.CarroController;
-import model.Placa;
-import model.automovel.Carro;
-import model.automovel.Veiculo;
-
 /**
+ * O projeto consiste em uma empresa que deseja informatizar o sistema de
+ * aluguel de veiculos. A empresa trabalha com aluguel de carros e motos. Para
+ * isso ele quer cadastrar os veículos informando: placa, cor, modelo,
+ * fabricante, etc;
+ * 
  * 
  * @author Lucas Miranda, Fábio Dias e Bruno Clementino.
  *
@@ -13,7 +13,7 @@ import model.automovel.Veiculo;
 public class Main {
 
 	public static void main(String[] args) {
-
+		
 	}
 
 }
