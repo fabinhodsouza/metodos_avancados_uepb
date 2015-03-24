@@ -7,7 +7,7 @@ import model.automovel.Moto;
 
 /**
  * A classe {@link MotoController} controla todo o fluxo de dados do sistema de
- * {@link Moto}. Nela têm-se os metodos de cadastrar, remover, atualizar e
+ * {@link Moto}. Nela têm-se os metodos de cadastrar, remover, atualizar e consultar motos
  * 
  * @author Lucas Miranda, Fabio Dias e Bruno Clementino.
  *

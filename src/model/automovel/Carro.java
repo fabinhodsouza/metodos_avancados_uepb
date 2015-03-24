@@ -9,8 +9,10 @@ import model.Placa;
  */
 
 public class Carro extends Veiculo {
-	/** Atributo que mostra a quantidade de porta do carro. */
+	/** Atributo que indica qual o modelo do carro. Ex: Sedan ou hatch */
 	private String tipoModelo;
+	
+	/** Atributo que mostra a quantidade de porta do carro. */
 	private Integer porta;
 	
 	
