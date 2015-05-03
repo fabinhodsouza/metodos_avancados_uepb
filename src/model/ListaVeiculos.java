@@ -23,5 +23,8 @@ public class ListaVeiculos {
 		this.quantidade = quantidade;
 	}
 	 
+	public double subTotal() {
+		return veiculo.getPrecoAluguel()*quantidade;
+	}
 }
  

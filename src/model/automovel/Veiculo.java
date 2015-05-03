@@ -7,13 +7,18 @@ import model.Placa;
  * @author Lucas Miranda, Fábio Dias e Bruno Clementino
  *
  */
-public abstract class Veiculo {
+public class Veiculo {
 	
 	private String marca;
 	private String cor;
 	private String modelo;
 	private Placa placa;
 	private double precoAluguel;
+	
+	public Veiculo() {
+		// TODO Auto-generated constructor stub
+	}
+	
 	/**
 	 * Nesse construtor têm os parametros que são básicos para seja considerado apto para {@link Aluga}. 
 	 * Sem esses parametros não poderam, ou não deveriam ser cadastrados.  
@@ -26,7 +31,6 @@ public abstract class Veiculo {
 	 */
 	public Veiculo(String marca, String cor, String modelo,
 			Placa placa, double precoAluguel) {
-		super();
 		this.marca = marca;
 		this.cor = cor;
 		this.modelo = modelo;
