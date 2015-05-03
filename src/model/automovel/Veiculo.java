@@ -13,6 +13,7 @@ public abstract class Veiculo {
 	private String cor;
 	private String modelo;
 	private Placa placa;
+	private double precoAluguel;
 	/**
 	 * Nesse construtor têm os parametros que são básicos para seja considerado apto para {@link Aluga}. 
 	 * Sem esses parametros não poderam, ou não deveriam ser cadastrados.  
@@ -24,12 +25,13 @@ public abstract class Veiculo {
 	 * @param placa
 	 */
 	public Veiculo(String marca, String cor, String modelo,
-			Placa placa) {
+			Placa placa, double precoAluguel) {
 		super();
 		this.marca = marca;
 		this.cor = cor;
 		this.modelo = modelo;
 		this.placa = placa;
+		this.precoAluguel = precoAluguel;
 	}
 
 	public String getMarca() {
@@ -62,5 +64,13 @@ public abstract class Veiculo {
 
 	public void setPlaca(Placa placa) {
 		this.placa = placa;
+	}
+
+	public double getPrecoAluguel() {
+		return precoAluguel;
+	}
+
+	public void setPrecoAluguel(double precoAluguel) {
+		this.precoAluguel = precoAluguel;
 	}
 }

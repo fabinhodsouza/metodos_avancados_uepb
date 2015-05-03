@@ -22,8 +22,8 @@ public class Moto extends Veiculo {
 	 * @param roda
 	 */
 	public Moto(String marca, String cor, String modelo,
-			Placa placa, Integer roda) {
-		super(marca, cor, modelo, placa);
+			Placa placa, double preco, Integer roda) {
+		super(marca, cor, modelo, placa, preco);
 		this.setRoda(roda);
 	}
 	

@@ -27,8 +27,8 @@ public class Carro extends Veiculo {
 	 * 
 	 */
 	public Carro(String marca, String cor, String modelo, String tipoModelo,
-			Placa placa, Integer porta) {
-		super(marca, cor, modelo, placa);
+			Placa placa, double preco, Integer porta) {
+		super(marca, cor, modelo, placa, preco);
 		this.setPorta(porta);
 		this.setTipoModelo(tipoModelo);
 	}
